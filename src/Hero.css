@@ -1,0 +1,325 @@
+/* =========================
+   HERO SECTION
+========================= */
+
+.hero {
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  /* background: #0f172a; */
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 80px 8%;
+  color: white;
+}
+
+/* =========================
+   PARTICLE CANVAS
+========================= */
+
+.particles-canvas {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
+
+/* =========================
+   GLOW EFFECTS
+========================= */
+
+.glow {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(120px);
+  z-index: 0;
+}
+
+.glow1 {
+  width: 300px;
+  height: 300px;
+  background: rgba(56, 189, 248, 0.25);
+  top: -80px;
+  left: -80px;
+}
+
+.glow2 {
+  width: 350px;
+  height: 350px;
+  background: rgba(139, 92, 246, 0.25);
+  bottom: -120px;
+  right: -120px;
+}
+
+/* =========================
+   HERO CONTAINER
+========================= */
+
+.hero-container {
+  position: relative;
+  z-index: 2;
+  width: 100%;
+  max-width: 1300px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 70px;
+}
+
+/* =========================
+   HERO IMAGE
+========================= */
+
+.hero-img {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+
+.hero-img img {
+  width: 380px;
+  height: 380px;
+  object-fit: cover;
+
+  border-radius: 50%;
+
+  border: 6px solid rgba(255, 255, 255, 0.1);
+
+  box-shadow:
+    0 0 30px rgba(56, 189, 248, 0.4),
+    0 0 60px rgba(56, 189, 248, 0.2);
+
+  transition: 0.4s ease;
+}
+
+.hero-img img:hover {
+  transform: scale(1.04);
+}
+
+/* =========================
+   HERO CONTENT
+========================= */
+
+.hero-content {
+  flex: 1;
+}
+
+.hero-content h1 {
+  font-size: 3.2rem;
+  line-height: 1.2;
+  margin-bottom: 20px;
+  font-weight: 700;
+}
+
+.hero-content h1 span {
+  color: #38bdf8;
+}
+
+/* =========================
+   TYPING TEXT
+========================= */
+
+.typing {
+  display: inline-block;
+  font-size: 1.8rem;
+  font-weight: 600;
+  color: #8b5cf6;
+  margin-bottom: 25px;
+}
+
+/* =========================
+   DESCRIPTION
+========================= */
+
+.hero-description {
+  max-width: 600px;
+  font-size: 1.05rem;
+  line-height: 1.9;
+  color: #cbd5e1;
+  margin-top: 20px;
+  margin-bottom: 35px;
+}
+
+/* =========================
+   BUTTONS
+========================= */
+
+.hero-buttons {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  flex-wrap: wrap;
+  margin-bottom: 35px;
+}
+
+.btn {
+  padding: 14px 30px;
+  border-radius: 10px;
+
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 1rem;
+
+  transition: all 0.3s ease;
+}
+
+/* Primary Button */
+
+.btn-primary {
+  background: #38bdf8;
+  color: #0f172a;
+}
+
+.btn-primary:hover {
+  background: #0ea5e9;
+  transform: translateY(-3px);
+}
+
+/* Outline Button */
+
+.btn-outline {
+  border: 2px solid #38bdf8;
+  color: #38bdf8;
+  background: transparent;
+}
+
+.btn-outline:hover {
+  background: #38bdf8;
+  color: #0f172a;
+  transform: translateY(-3px);
+}
+
+/* =========================
+   SOCIAL ICONS
+========================= */
+
+.social-links {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.social-links a {
+  width: 48px;
+  height: 48px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 50%;
+
+  background: rgba(255, 255, 255, 0.08);
+
+  color: white;
+  font-size: 1.3rem;
+
+  transition: 0.3s ease;
+}
+
+.social-links a:hover {
+  background: #38bdf8;
+  color: #0f172a;
+
+  transform: translateY(-5px) scale(1.1);
+}
+
+/* =========================
+   RESPONSIVE DESIGN
+========================= */
+
+@media (max-width: 992px) {
+
+  .hero-container {
+    flex-direction: column;
+    text-align: center;
+    gap: 50px;
+  }
+
+  .hero-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .hero-content h1 {
+    font-size: 2.7rem;
+  }
+
+  .typing {
+    font-size: 1.5rem;
+  }
+
+  .hero-description {
+    max-width: 100%;
+  }
+
+  .hero-img img {
+    width: 320px;
+    height: 320px;
+  }
+}
+
+@media (max-width: 768px) {
+
+  .hero {
+    padding: 60px 6%;
+  }
+
+  .hero-content h1 {
+    font-size: 2.2rem;
+  }
+
+  .typing {
+    font-size: 1.3rem;
+  }
+
+  .hero-description {
+    font-size: 0.95rem;
+    line-height: 1.7;
+  }
+
+  .hero-buttons {
+    justify-content: center;
+  }
+
+  .btn {
+    padding: 12px 24px;
+    font-size: 0.95rem;
+  }
+
+  .hero-img img {
+    width: 260px;
+    height: 260px;
+  }
+}
+
+@media (max-width: 480px) {
+
+  .hero-content h1 {
+    font-size: 1.8rem;
+  }
+
+  .typing {
+    font-size: 1.1rem;
+  }
+
+  .hero-img img {
+    width: 220px;
+    height: 220px;
+  }
+
+  .social-links {
+    gap: 14px;
+  }
+
+  .social-links a {
+    width: 42px;
+    height: 42px;
+    font-size: 1.1rem;
+  }
+}

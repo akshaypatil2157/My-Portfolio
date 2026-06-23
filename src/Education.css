@@ -1,0 +1,211 @@
+/* =========================
+   EDUCATION SECTION
+========================= */
+
+.education {
+  padding: 120px 8%;
+  min-height: 100vh;
+  position: relative;
+  overflow: hidden;
+}
+
+/* =========================
+   SECTION TITLE
+========================= */
+
+.education h2 {
+  text-align: center;
+  font-size: 3rem;
+  font-weight: 700;
+  color: #ffffff;
+  margin-bottom: 70px;
+  position: relative;
+  letter-spacing: 1px;
+}
+
+.education h2::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: -14px;
+  transform: translateX(-50%);
+
+  width: 85px;
+  height: 4px;
+
+  border-radius: 50px;
+
+  background: linear-gradient(90deg, #00f5ff, #00ff9d);
+}
+
+/* =========================
+   EDUCATION CONTAINER
+========================= */
+
+.edu-container {
+  max-width: 1250px;
+  margin: auto;
+
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 35px;
+}
+
+/* =========================
+   EDUCATION CARD
+========================= */
+
+.edu-card {
+  position: relative;
+
+  padding: 40px 30px;
+
+  border-radius: 24px;
+
+  background: rgba(15, 23, 42, 0.55);
+
+  border: 1px solid rgba(255, 255, 255, 0.08);
+
+  backdrop-filter: blur(15px);
+  -webkit-backdrop-filter: blur(15px);
+
+  overflow: hidden;
+
+  transition: all 0.4s ease;
+
+  box-shadow:
+    0 10px 25px rgba(0, 0, 0, 0.25);
+}
+
+/* Top Glow Border */
+
+.edu-card::before {
+  content: "";
+
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  width: 100%;
+  height: 4px;
+
+  background: linear-gradient(90deg, #00f5ff, #00ff9d);
+}
+
+/* Hover */
+
+.edu-card:hover {
+  transform: translateY(-10px);
+
+  border-color: rgba(0, 245, 255, 0.4);
+
+  box-shadow:
+    0 12px 35px rgba(0, 245, 255, 0.15),
+    0 0 25px rgba(0, 255, 157, 0.1);
+}
+
+/* =========================
+   CARD TEXT
+========================= */
+
+.edu-card h3 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  font-weight: 700;
+
+  color: #00f5ff;
+}
+
+.edu-card p {
+  color: #dbeafe;
+
+  font-size: 1.05rem;
+  line-height: 1.8;
+
+  margin-bottom: 18px;
+}
+
+/* CGPA / Percentage */
+
+.edu-card span {
+  display: inline-block;
+
+  padding: 10px 20px;
+
+  border-radius: 40px;
+
+  background: rgba(0, 245, 255, 0.1);
+
+  border: 1px solid rgba(0, 245, 255, 0.25);
+
+  color: #00ff9d;
+
+  font-weight: 700;
+  font-size: 1rem;
+
+  margin-bottom: 18px;
+}
+
+/* Date */
+
+.edu-card .date {
+  color: #94a3b8;
+  font-size: 0.95rem;
+  font-weight: 500;
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media (max-width: 1100px) {
+
+  .edu-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+
+  .education {
+    padding: 90px 6%;
+  }
+
+  .education h2 {
+    font-size: 2.4rem;
+  }
+
+  .edu-container {
+    grid-template-columns: 1fr;
+    gap: 25px;
+  }
+
+  .edu-card {
+    padding: 35px 25px;
+  }
+
+  .edu-card h3 {
+    font-size: 1.7rem;
+  }
+}
+
+@media (max-width: 480px) {
+
+  .education h2 {
+    font-size: 2rem;
+  }
+
+  .edu-card {
+    padding: 28px 20px;
+    border-radius: 20px;
+  }
+
+  .edu-card h3 {
+    font-size: 1.45rem;
+  }
+
+  .edu-card span {
+    width: 100%;
+    text-align: center;
+  }
+}
